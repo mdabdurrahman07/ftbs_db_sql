@@ -190,7 +190,9 @@ VALUES
 -- Query 1: Retrieve all upcoming football matches belonging to the 'Champions League' where the match status is 'Available'.
 
 SELECT
-  *
+  match_id,
+  fixture,
+  base_ticket_price
 FROM
   matches
 WHERE
@@ -200,13 +202,15 @@ WHERE
 -- Query 2: Search for all users whose full names start with 'Tanvir' or contain the phrase 'Haque' (case-insensitive).
 
 SELECT
-  *
+  user_id,
+  full_name,
+  email
 FROM
   users
 WHERE
   full_name ILIKE 'Tanvir%'
   OR full_name ILIKE '%Haque%';
-  
+
 -- Query 3: Retrieve all booking records where the payment status is missing (NULL), replacing the empty result with 'Action Required'.
 -- Query 4: Retrieve match booking details along with the User's full name and the scheduled Match fixture teams.
 -- Query 5: Display a comprehensive list of all users and their booking IDs, ensuring that fans who have never bought a ticket are still listed.
