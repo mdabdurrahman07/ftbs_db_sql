@@ -212,6 +212,17 @@ WHERE
   OR full_name ILIKE '%Haque%';
 
 -- Query 3: Retrieve all booking records where the payment status is missing (NULL), replacing the empty result with 'Action Required'.
+
+SELECT
+  booking_id,
+  user_id,
+  match_id,
+  coalesce(payment_status, 'Action Required') AS systematic_status
+FROM
+  bookings
+WHERE
+  payment_status IS NULL;
+
 -- Query 4: Retrieve match booking details along with the User's full name and the scheduled Match fixture teams.
 -- Query 5: Display a comprehensive list of all users and their booking IDs, ensuring that fans who have never bought a ticket are still listed.
 -- Query 6: Find all ticket bookings where the total cost is strictly higher than the average cost of all ticket bookings.
