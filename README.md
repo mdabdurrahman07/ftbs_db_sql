@@ -53,3 +53,12 @@ This transactional table records individual ticket purchases by linking users to
 | `seat_number` | The specific allocated seat identifier in the stadium (e.g., `A-12`). |
 | `payment_status` | Tracks financial resolution (`Pending`, `Confirmed`, `Cancelled`, `Refunded`). |
 | `total_cost` | The calculated final invoice price based on the base price and seat quantity. |
+
+
+## ER DIAGRAM IMAGE
+
+![ER DIAGRAM](https://i.ibb.co.com/rK5B5dC0/Screenshot-From-2026-06-14-12-15-42.png)
+
+## Author
+
+- [@mdaburrahman](https://github.com/mdabdurrahman07)
